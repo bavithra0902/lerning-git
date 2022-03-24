@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                git([url: 'https://github.com/wo7and/lerning-git.git', branch: 'master', credentialsId: 'bavithra0902-github-user-token'])
+                git([url: 'https://github.com/bavithra0902/lerning-git.git', branch: 'master', credentialsId: 'bavithra0902-github-user-token'])
             }
         }
         stage('Build Image') {
