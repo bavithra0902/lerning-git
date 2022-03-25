@@ -1,14 +1,14 @@
 pipeline {
   environment {
     imagename = "bavi9220/mynginxapp"
-    registryCredential = 'bavi9220-dockerhub'
+    registryCredential = 'dockerhubid'
     dockerImage = ''
     }
     agent any
     stages {
         stage('Git Clone') {
             steps {
-                git([url: 'https://github.com/bavithra0902/lerning-git.git', branch: 'master', credentialsId: 'bavithra0902-github-user-token'])
+                git([url: 'https://github.com/bavithra0902/lerning-git.git', branch: 'master', credentialsId: 'bavithra0902-githubid'])
             }
         }
         stage('Build Image') {
